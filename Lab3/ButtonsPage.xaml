@@ -15,10 +15,10 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center">
-            <Button Text="BUTTON" Style="{StaticResource buttonStyle}" Clicked="ButtonOne_Pressed"/>
-            <Button Text="BUTTON" Style="{StaticResource buttonStyle}" Clicked="ButtonTwo_Pressed"/>
-            <Button Text="BUTTON" Style="{StaticResource buttonStyle}" Clicked="ButtonThree_Pressed"/>
-            <Entry/>
+            <Button ClassId="button1" Text="BUTTON" Style="{StaticResource buttonStyle}" Clicked="Handle_Clicked"/>
+            <Button ClassId="button2" Text="BUTTON" Style="{StaticResource buttonStyle}" Clicked="Handle_Clicked"/>
+            <Button ClassId="button3" Text="BUTTON" Style="{StaticResource buttonStyle}" Clicked="Handle_Clicked"/>
+            <Entry x:Name="inputText"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

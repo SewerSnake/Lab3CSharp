@@ -12,19 +12,25 @@ namespace Lab3
             InitializeComponent();
         }
 
-        void ButtonOne_Pressed(object sender, System.EventArgs e)
+        void Handle_Clicked(object sender, System.EventArgs e)
         {
-            Console.WriteLine("1");
-        }
+            string classId = (sender as Button).ClassId;
 
-        void ButtonTwo_Pressed(object sender, System.EventArgs e)
-        {
-            Console.WriteLine("2");
-        }
+            var input = this.FindByName<Entry>("inputText");
 
-        void ButtonThree_Pressed(object sender, System.EventArgs e)
-        {
-            Console.WriteLine("3");
+            switch (classId)
+            {
+                case "button1":
+                    input.Text = "Knapp 1";
+                    break;
+                case "button2":
+                    input.Text = "Knapp 2";
+                    break;
+                case "button3":
+                    string outputText = $"Du skrev in {input.Text}";
+                    input.Text = outputText;
+                    break;
+            }
         }
     }
 }
