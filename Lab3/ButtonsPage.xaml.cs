@@ -11,5 +11,20 @@ namespace Lab3
         {
             InitializeComponent();
         }
+
+        void ButtonOne_Pressed(object sender, System.EventArgs e)
+        {
+            Console.WriteLine("1");
+        }
+
+        void ButtonTwo_Pressed(object sender, System.EventArgs e)
+        {
+            Console.WriteLine("2");
+        }
+
+        void ButtonThree_Pressed(object sender, System.EventArgs e)
+        {
+            Console.WriteLine("3");
+        }
     }
 }
