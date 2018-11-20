@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="Lab3.ButtonsPage">
+             x:Class="Lab3.ButtonsPage"
+             BackgroundColor="Black">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#6E6E6E"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontSize" Value="30"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Button" Clicked="ButtonOne_Pressed"/>
-            <Button Text="Button" Clicked="ButtonTwo_Pressed"/>
-            <Button Text="Button" Clicked="ButtonThree_Pressed"/>
+        <StackLayout VerticalOptions="Center">
+            <Button Text="BUTTON" Style="{StaticResource buttonStyle}" Clicked="ButtonOne_Pressed"/>
+            <Button Text="BUTTON" Style="{StaticResource buttonStyle}" Clicked="ButtonTwo_Pressed"/>
+            <Button Text="BUTTON" Style="{StaticResource buttonStyle}" Clicked="ButtonThree_Pressed"/>
             <Entry/>
         </StackLayout>
     </ContentPage.Content>
